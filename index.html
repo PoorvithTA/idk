@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>𝙞𝙙𝙠 - Poorvith T.A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #242629;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+    
+    }
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    header { padding: 2rem 0 0.5rem 0; text-align: center; font-size: 2.5rem; color: #fff; }
+    nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-size: 1.15rem; }
+    nav a { color: #fafafa; text-decoration: none; padding: 0.45em 1.1em; border-radius: 8px; background: #181818; font-weight: 500; transition: background 0.14s; }
+    nav a:hover { background: #323232; color: #fff; }
+    .container { background: #111113; border-radius: 18px; padding: 2.4rem 2.5rem; margin-bottom: 2rem; box-shadow: 0 0 15px #15151a99; max-width: 540px; width: 93vw; min-height: 150px; text-align: center; font-size: 1.2rem; }
+    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .random-output { font-size: 1.22rem; margin: 1.4em 0 1.1em 0; min-height: 40px; color: #fafafa; word-break: break-word; transition: color 0.22s; }
+    footer { margin-top: auto; background-color: #0d1117; padding: 2rem; text-align: center; font-size: 0.9rem; color: #ccc; border-top: 2px solid #1f2a36; width: calc(100% - 2cm); margin-left: 1cm; margin-right: 1cm; margin-top: 1cm; border-radius: 16px; }
+    footer a { color: #72a4f2; text-decoration: none; font-weight: bold; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>𝙞𝙙𝙠</header>
+  <nav>
+    <a href="#" onclick="shuffleNav();return false;">Home</a>
+    <a href="#" onclick="shuffleNav();return false;">Blog</a>
+    <a href="#" onclick="shuffleNav();return false;">Projects</a>
+    <a href="#" onclick="shuffleNav();return false;">Contact</a>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="random-output" id="randomOutput"></div>
+      <div style="font-size:1rem;color:#ccc;">
+        <em>Truly random, weird, and non-factual. Move/click/scroll/type or just wait for chaos.</em>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Made with 💓 &amp; care by 
+    <a href="https://youtube.com/@PoorvithsLife_Official" target="_blank">Poorvith T.A</a>
+    <br><br>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script>
+    kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'O5O81GPS1N');
+    kofiwidget2.draw();
+    </script>
+    <br><br>
+    © 2025 Poorvith T.A • 
+    <a href="https://ig.me/m/i_am_poorvith" target="_blank">Contact Me</a>
+  </footer>
+  <script>
+    const randomStuff = [
+      "blip blop blup blap",
+      "Please wait while nothing happens...",
+      "Too many brooms spoil the spaceship.",
+      "Insert potato here.",
+      "404: Reason not found.",
+      "Unicorn not responding. Try again later.",
+      ". . . loading ∞",
+      "~wave to the void~",
+      "Snack time? But only for pixels.",
+      "Huge invisible triangle detected.",
+      "Don't press that—oh wait, this is random.",
+      "Boop beep.",
+      "Here's a random number: " + Math.floor(Math.random()*10000),
+      "Why is there a duck in the server room?",
+      "(This space left intentionally weird)",
+      "Gravity turned sideways.",
+      "Null null NULL!",
+      "The website is now quantum.",
+      "Blink twice for yes.",
+      "Not a drill. Unless you wanted a drill.",
+      "*stares into static*",
+      "Suspicious cloud formation detected—inside.",
+      "Congratulations, you did absolutely nothing!",
+      "(╯°□°）╯︵ ┻━┻",
+      "You are now breathing manually.",
+      "Invisible cheese.",
+      "Warping to another browser tab...",
+      "Randomly generated randomness.",
+      "This statement is false.",
+      "Pls send snacks.",
+      "The time is now: [insert time].",
+      "Tiny elephant stampede!",
+      "Don't tell the penguins.",
+      "(ノಠ益ಠ)ノ彡┻━┻",
+      "Oh look, more words.",
+      "Now featuring: silence.",
+      "Secret cat unlocked!",
+      "Please wait w̶h̶i̶l̶e̶ forever.",
+      "_ _ _ _ _ ∞",
+      "Bouncing pixels engage!",
+      "[ERROR 01010010]",
+      "Psst! You dropped something.",
+      "Confetti not included.",
+      "This webpage is gluten free.",
+      "All your base are belong to us.",
+      "No ducks given.",
+      "(☞ﾟヮﾟ)☞     ☜(ﾟヮﾟ☜)",
+      "Feeling funky.",
+      "This is the 100th random message. Maybe.",
+      "Stay hydrated!",
+      "Did you just blink?",
+      "Nope. Still here.",
+      "Super secret: There's no secret.",
+      "You're reading this. How meta!",
+      "Zero gravity enabled.",
+      "Insert coin to continue.",
+      "Three raccoons in a trench coat.",
+      "-1 bananas.",
+      "!!! ~ randomize again ~ !!!",
+      "A wild null appeared!",
+      "Running out of randomness...",
+      "Byte me.",
+      "~(˘▾˘~)",
+      "Please rotate your device. Or don't.",
+      "In case of boredom, break glass.",
+      "This page likes you.",
+      "404 fun found",
+      "(づ｡◕‿‿◕｡)づ",
+      "Moo?",
+      "Ctrl+Alt+Del your expectations.",
+      "0xDEADBEEF",
+      "Nothing ventured, nothing computed.",
+      "Insert random ASCII art here.",
+      "Red pill? Blue pill? Nah, grape.",
+      "O_o",
+      "Quantum ducks all the way down.",
+      "404: Cats not found.",
+      "[PLACEHOLDER MESSAGE]",
+      "Processing... done? Maybe.",
+      "Vibing in grayscale.",
+      "Anomaly detected: You.",
+      "You win the nothing prize!",
+      "Vaporwave cassette insert.",
+      "~static noises~",
+      "Boop!",
+      "Your randomness is being prepared.",
+      "The universe just winked at you.",
+      "// TODO: Make this less random",
+      "Turing complete.",
+      "Unsubscribed from reality.",
+      "Recalculating route...",
+      "Unleash the llamas.",
+      "*insert jazz hands*",
+      "System32 not found: Dance anyway.",
+      "Choose your own absurd ending.",
+      "This site is powered by coffee.",
+      "Nothing matters—and that's okay.",
+      "Quantum banana loaded.",
+      "Hover for surprise (just kidding)",
+      "Lorem ipsum but make it glitch.",
+      "#hashtagsarefun",
+      "If you can read this you're too close.",
+      "Mysterious orb detected.",
+      "This is your sign.",
+      "You found a random egg.",
+      "Ping!",
+      "Nyan cat ran by.",
+      "Congratulations, it's randomness.",
+      "You have found the random key use it in my other project(just check in all my projects) : abd2",
+      // ... add more as you wish, or use programmatic generators for longer lists!
+    ];
+
+    function randomizeOutput() {
+      const output = document.getElementById('randomOutput');
+      let n = Math.floor(Math.random()*randomStuff.length);
+      output.innerHTML = randomStuff[n];
+      if(n % 13 === 0) {
+        document.body.style.background = "#fff";
+        setTimeout(() => { document.body.style.background = "#242629"; }, 130);
+      }
+      if(Math.random() > 0.97) {
+        const navs = document.querySelectorAll("nav a");
+        navs[Math.floor(Math.random()*navs.length)].innerText = "???";
+      }
+    }
+    window.onload = randomizeOutput;
+    document.body.addEventListener("mousemove", () => { if(Math.random()>0.94) randomizeOutput(); });
+    document.body.addEventListener("keydown", () => { if(Math.random()>0.7) randomizeOutput(); });
+    document.body.addEventListener("scroll", () => { if(Math.random()>0.9) randomizeOutput(); });
+    setInterval(() => { if(Math.random()>0.97) randomizeOutput(); }, 4000);
+    function shuffleNav() {
+      randomizeOutput();
+      window.location.hash = "#rnd" + Math.floor(Math.random()*9999);
+    }
+  </script>
+</body>
+</html>
